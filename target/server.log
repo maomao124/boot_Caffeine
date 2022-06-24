@@ -1,0 +1,14 @@
+2022-06-24 18:44:44.565  INFO 18488 --- [main] m.boot_caffeine.BootCaffeineApplication  : Starting BootCaffeineApplication v0.0.1-SNAPSHOT using Java 16.0.2 on mao with PID 18488 (H:\程序\大三暑假\boot_Caffeine\target\boot_Caffeine-0.0.1-SNAPSHOT.jar started by mao in H:\程序\大三暑假\boot_Caffeine\target)
+2022-06-24 18:44:44.568 DEBUG 18488 --- [main] m.boot_caffeine.BootCaffeineApplication  : Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-06-24 18:44:44.569  INFO 18488 --- [main] m.boot_caffeine.BootCaffeineApplication  : The following 1 profile is active: "dev"
+2022-06-24 18:44:46.076  INFO 18488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-24 18:44:46.088  INFO 18488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-24 18:44:46.088  INFO 18488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-06-24 18:44:46.179  INFO 18488 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-24 18:44:46.180  INFO 18488 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1537 ms
+2022-06-24 18:44:46.321  INFO 18488 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-06-24 18:44:46.551  INFO 18488 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-06-24 18:44:46.916  WARN 18488 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "mao.boot_caffeine.entity.ItemStock".
+2022-06-24 18:44:46.917  WARN 18488 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class mao.boot_caffeine.entity.ItemStock ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-06-24 18:44:47.589  INFO 18488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-24 18:44:47.603  INFO 18488 --- [main] m.boot_caffeine.BootCaffeineApplication  : Started BootCaffeineApplication in 3.664 seconds (JVM running for 4.163)
