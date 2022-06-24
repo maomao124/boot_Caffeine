@@ -360,88 +360,93 @@
     </div>
 </div>
 
-    <script src="js/vue.js"></script>
-    <script src="js/axios.min.js"></script>
-    <script src="js/common.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/common.js"></script>
 
-    <script>
-        const itemVm = new Vue({
+<script>
+    const itemVm = new Vue(
+        {
             el: "#itemApp",
-            data: {
-                util,
-                num: 1, // 购买数量
-                item: {}, //商品信息
-                isTest: false // 是否是测试模式
-            },
+            data:
+                {
+                    util,
+                    num: 1, // 购买数量
+                    item: {}, //商品信息
+                    isTest: false // 是否是测试模式
+                },
             created()
             {
                 // 根据id查询商品
                 this.queryItemById();
             },
-            watch: {
-                isTest()
+            watch:
                 {
-                    this.queryItemById();
-                }
-            },
-            methods: {
-                queryItemById(id)
-                {
-                    if (!this.isTest)
+                    isTest()
                     {
-                        // 获取页面的商品id
-                        let id = this.util.getUrlParam("id");
-                        // 正式模式，查询商品信息
-                        axios.get("/api/item/" + id)
-                            .then(resp => this.item = resp.data)
-                            .catch(err =>
-                            {
-                                this.isTest = true
-                                console.log(err);
-                            })
+                        this.queryItemById();
                     }
-                    else
+                },
+            methods:
+                {
+                    queryItemById(id)
                     {
-                        // 测试模式，提供假数据
-                        this.item = {
-                            "id": 10001,
-                            "name": "SALSA AIR",
-                            "title": "RIMOWA 21寸托运箱拉杆箱 SALSA AIR系列果绿色 820.70.36.4",
-                            "price": 17900,
-                            "image": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t6934/364/1195375010/84676/e9f2c55f/597ece38N0ddcbc77.jpg!q70.jpg.webp",
-                            "category": "拉杆箱",
-                            "brand": "RIMOWA",
-                            "spec": "",
-                            "status": 1,
-                            "createTime": "2019-04-30T16:00:00.000+00:00",
-                            "updateTime": "2019-04-30T16:00:00.000+00:00",
-                            "stock": 2999,
-                            "sold": 31290
+                        if (!this.isTest)
+                        {
+                            // 获取页面的商品id
+                            let id = this.util.getUrlParam("id");
+                            // 正式模式，查询商品信息
+                            axios.get("/item/" + id)
+                                .then(resp => this.item = resp.data)
+                                .catch(err =>
+                                {
+                                    this.isTest = true
+                                    console.log(err);
+                                })
                         }
-                    }
-                },
-                decrement()
-                {
-                    if (this.num > 1)
+                        else
+                        {
+                            // 测试模式，提供假数据
+                            this.item =
+                                {
+                                    "id": 10001,
+                                    "name": "SALSA AIR",
+                                    "title": "RIMOWA 21寸托运箱拉杆箱 SALSA AIR系列果绿色 820.70.36.4",
+                                    "price": 17900,
+                                    "image": "https://m.360buyimg.com/mobilecms/s720x720_jfs/t6934/364/1195375010/84676/e9f2c55f/597ece38N0ddcbc77.jpg!q70.jpg.webp",
+                                    "category": "拉杆箱",
+                                    "brand": "RIMOWA",
+                                    "spec": "",
+                                    "status": 1,
+                                    "createTime": "2019-04-30T16:00:00.000+00:00",
+                                    "updateTime": "2019-04-30T16:00:00.000+00:00",
+                                    "stock": 2999,
+                                    "sold": 31290
+                                }
+                        }
+                    },
+                    decrement()
                     {
-                        this.num--;
-                    }
-                },
-                increment()
-                {
-                    this.num++;
-                },
-                parseJSON(str)
-                {
-                    if (!str)
+                        if (this.num > 1)
+                        {
+                            this.num--;
+                        }
+                    },
+                    increment()
                     {
-                        return {};
+                        this.num++;
+                    },
+                    parseJSON(str)
+                    {
+                        if (!str)
+                        {
+                            return {};
+                        }
+                        return JSON.parse(str);
                     }
-                    return JSON.parse(str);
                 }
-            }
         });
-    </script>
+</script>
 </body>
 
 </html>
