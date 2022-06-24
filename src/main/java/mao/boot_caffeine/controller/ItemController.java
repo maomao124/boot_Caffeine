@@ -114,9 +114,7 @@ public class ItemController
     @GetMapping("/{id}")
     public Item findById(@PathVariable("id") Long id)
     {
-        return itemService.query()
-                .ne("status", 3).eq("id", id)
-                .one();
+        return itemService.findById(id);
     }
 
     /**

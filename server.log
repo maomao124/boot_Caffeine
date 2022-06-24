@@ -1,12 +1,38 @@
-2022-06-24 18:00:53.881  WARN 1780 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-06-24 18:00:55.056  WARN 1780 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-06-24 18:00:56.139  WARN 1780 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-06-24 18:00:56.914  WARN 1780 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-06-24 18:00:57.866  WARN 1780 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-06-24 18:00:58.525  WARN 1780 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-06-24 18:01:13.520 DEBUG 1780 --- [http-nio-8080-exec-1] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
-2022-06-24 18:01:13.536 DEBUG 1780 --- [http-nio-8080-exec-1] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 1(Long)
-2022-06-24 18:01:13.552 DEBUG 1780 --- [http-nio-8080-exec-1] m.b.mapper.ItemMapper.selectList         : <==      Total: 0
-2022-06-24 18:01:24.662 DEBUG 1780 --- [http-nio-8080-exec-4] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
-2022-06-24 18:01:24.663 DEBUG 1780 --- [http-nio-8080-exec-4] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 2(Long)
-2022-06-24 18:01:24.664 DEBUG 1780 --- [http-nio-8080-exec-4] m.b.mapper.ItemMapper.selectList         : <==      Total: 0
+2022-06-24 18:33:42.908 DEBUG 20104 --- [http-nio-8080-exec-8] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
+2022-06-24 18:33:42.911 DEBUG 20104 --- [http-nio-8080-exec-8] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 10004(Long)
+2022-06-24 18:33:42.914 DEBUG 20104 --- [http-nio-8080-exec-8] m.b.mapper.ItemMapper.selectList         : <==      Total: 1
+2022-06-24 18:34:00.220 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
+2022-06-24 18:34:00.220 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 10005(Long)
+2022-06-24 18:34:00.222 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : <==      Total: 1
+2022-06-24 18:34:04.303 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
+2022-06-24 18:34:04.304 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 10006(Long)
+2022-06-24 18:34:04.305 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : <==      Total: 0
+2022-06-24 18:34:10.416 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
+2022-06-24 18:34:10.417 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 10001(Long)
+2022-06-24 18:34:10.419 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : <==      Total: 1
+2022-06-24 18:34:15.565 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
+2022-06-24 18:34:15.565 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 10002(Long)
+2022-06-24 18:34:15.567 DEBUG 20104 --- [http-nio-8080-exec-6] m.b.mapper.ItemMapper.selectList         : <==      Total: 1
+2022-06-24 18:35:26.323  WARN 20104 --- [http-nio-8080-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/test, version : 1.2.8, lastPacketReceivedIdleMillis : 70756
+2022-06-24 18:35:26.343 DEBUG 20104 --- [http-nio-8080-exec-10] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
+2022-06-24 18:35:26.343 DEBUG 20104 --- [http-nio-8080-exec-10] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 10001(Long)
+2022-06-24 18:35:26.345 DEBUG 20104 --- [http-nio-8080-exec-10] m.b.mapper.ItemMapper.selectList         : <==      Total: 1
+2022-06-24 18:38:28.101  WARN 20104 --- [http-nio-8080-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/test, version : 1.2.8, lastPacketReceivedIdleMillis : 181757
+2022-06-24 18:38:28.120 DEBUG 20104 --- [http-nio-8080-exec-3] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
+2022-06-24 18:38:28.121 DEBUG 20104 --- [http-nio-8080-exec-3] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 10002(Long)
+2022-06-24 18:38:28.122 DEBUG 20104 --- [http-nio-8080-exec-3] m.b.mapper.ItemMapper.selectList         : <==      Total: 1
+2022-06-24 18:38:37.489 DEBUG 20104 --- [http-nio-8080-exec-1] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
+2022-06-24 18:38:37.490 DEBUG 20104 --- [http-nio-8080-exec-1] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 10003(Long)
+2022-06-24 18:38:37.491 DEBUG 20104 --- [http-nio-8080-exec-1] m.b.mapper.ItemMapper.selectList         : <==      Total: 1
+2022-06-24 18:42:09.339  WARN 20104 --- [http-nio-8080-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/test, version : 1.2.8, lastPacketReceivedIdleMillis : 211849
+2022-06-24 18:42:09.361 DEBUG 20104 --- [http-nio-8080-exec-3] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
+2022-06-24 18:42:09.362 DEBUG 20104 --- [http-nio-8080-exec-3] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 10002(Long)
+2022-06-24 18:42:09.364 DEBUG 20104 --- [http-nio-8080-exec-3] m.b.mapper.ItemMapper.selectList         : <==      Total: 1
+2022-06-24 18:42:34.985 DEBUG 20104 --- [http-nio-8080-exec-1] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
+2022-06-24 18:42:34.985 DEBUG 20104 --- [http-nio-8080-exec-1] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 10004(Long)
+2022-06-24 18:42:34.986 DEBUG 20104 --- [http-nio-8080-exec-1] m.b.mapper.ItemMapper.selectList         : <==      Total: 1
+2022-06-24 18:42:38.828 DEBUG 20104 --- [http-nio-8080-exec-2] m.b.mapper.ItemMapper.selectList         : ==>  Preparing: SELECT id,title,name,price,image,category,brand,spec,status,create_time,update_time FROM tb_item WHERE (status <> ? AND id = ?)
+2022-06-24 18:42:38.829 DEBUG 20104 --- [http-nio-8080-exec-2] m.b.mapper.ItemMapper.selectList         : ==> Parameters: 3(Integer), 10005(Long)
+2022-06-24 18:42:38.831 DEBUG 20104 --- [http-nio-8080-exec-2] m.b.mapper.ItemMapper.selectList         : <==      Total: 1
+2022-06-24 18:42:54.501  INFO 20104 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-06-24 18:42:54.506  INFO 20104 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

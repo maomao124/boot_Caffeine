@@ -15,4 +15,7 @@ public interface IItemService extends IService<Item>
 {
 
     void saveItem(Item item);
+
+
+    Item findById(Long id);
 }
